@@ -17,7 +17,7 @@ def abrir_archivo(archivo):
         print("No hay archivo asociado a esta tarea.")
 
 def notificar(tarea):
-    print(f"🔔 Recordatorio: {tarea['nombre']} (Importancia: {tarea['importancia']})")
+    print(f"Recordatorio: {tarea['nombre']} (Importancia: {tarea['importancia']})")
     abrir_archivo(tarea["archivo"])
 
 def consultar_internet(tarea):
