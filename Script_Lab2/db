@@ -1,0 +1,3 @@
+sqlite3 tasks.db "CREATE TABLE tasks (name TEXT, file_path TEXT, category TEXT, status TEXT);"
+sqlite3 tasks.db "INSERT INTO tasks VALUES ('Mi Proyecto', '/ruta/al/archivo.vhd', 'VHDL', 'pending');"
+  
