@@ -31,11 +31,18 @@ do
             
             xdg-open reporte_cita.txt &
 
-        elif [ "$CAT" == "VHDL" ]
+        elif [ "$CAT" == "VHDL" ] # O puedes cambiar la categoría a "Python"
         then
-            # Abrir VS Code en el archivo específico
-            code "$FILE" &
-        fi
+            # --- SCAMPER: Sustituir (Thonny por VS Code) ---
+            # Verificamos si el archivo es .py para que Thonny no tenga problemas
+            if [[ "$FILE" == *.py ]]; then
+                notify-send "Programación" "Abriendo $NAME en Thonny..."
+                thonny "$FILE" &
+            else
+                # Si es un archivo de otro tipo (como VHDL), usamos un editor de texto
+                notify-send "Sistema" "Abriendo archivo de texto..."
+                mousepad "$FILE" & 
+            fi
 
         # 5. ACTUALIZACIÓN CRÍTICA: Marcar como hecha
         sqlite3 $DB_PATH "UPDATE tasks SET status='done' WHERE name='$NAME';"
