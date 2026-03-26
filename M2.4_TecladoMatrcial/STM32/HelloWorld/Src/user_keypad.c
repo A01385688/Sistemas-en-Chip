@@ -66,7 +66,6 @@ uint8_t USER_Key( void ){
     if (key != 0xFFU) break;
     }
 
-    // 2. Lógica de la Bandera (Flanco de bajada)
     if (key != 0xFFU) {
         if (!Bkey){
             key = key; 
