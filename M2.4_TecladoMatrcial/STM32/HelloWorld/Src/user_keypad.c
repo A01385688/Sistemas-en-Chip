@@ -5,14 +5,16 @@
 void USER_Keypad_Init( void ){
     RCC->APB2ENR |= ( 0x1UL << 3U );
 
-    GPIOB->ODR |= ( 0x1UL << 0U );//	Reset ODR0 bit
-    GPIOB->ODR |= ( 0x1UL << 1U );//	Reset ODR1 bit
-    GPIOB->ODR |= ( 0x1UL << 2U );//	Reset ODR2 bit
-    GPIOB->ODR |= ( 0x1UL << 3U );//	Reset ODR3 bit
-    GPIOB->ODR |= ( 0x1UL << 4U );//	Reset ODR4 bit
-    GPIOB->ODR |= ( 0x1UL << 5U );//	Reset ODR5 bit
-    GPIOB->ODR |= ( 0x1UL << 6U );//	Reset ODR6 bit
-    GPIOB->ODR |= ( 0x1UL << 7U );//	Reset ODR7 bit
+    GPIOB->ODR = 0x0UL;//               Reset (Limpieza) de los 16 bits
+
+    GPIOB->ODR |= ( 0x1UL << 0U );//	Set ODR0 bit
+    GPIOB->ODR |= ( 0x1UL << 1U );//	Set ODR1 bit
+    GPIOB->ODR |= ( 0x1UL << 2U );//	Set ODR2 bit
+    GPIOB->ODR |= ( 0x1UL << 3U );//	Set ODR3 bit
+    GPIOB->ODR |= ( 0x1UL << 4U );//	Set ODR4 bit
+    GPIOB->ODR |= ( 0x1UL << 5U );//	Set ODR5 bit
+    GPIOB->ODR |= ( 0x1UL << 6U );//	Set ODR6 bit
+    GPIOB->ODR |= ( 0x1UL << 7U );//	Set ODR7 bit
 
     //Limpiamos el registro CRL
     GPIOB->CRL  = GPIOB->CRL & ~( 0xFUL << 0U );//       Filas (Outputs)
