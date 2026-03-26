@@ -54,5 +54,4 @@ uint8_t USER_Key( void ){
 }
             
 
-    return key;
-}
+
