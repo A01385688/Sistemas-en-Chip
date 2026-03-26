@@ -14,21 +14,21 @@ void USER_Keypad_Init( void ){
     GPIOB->ODR & = ~( 0x1UL << 6U );//	Reset ODR6 bit
     GPIOB->ODR & = ~( 0x1UL << 7U );//	Reset ODR7 bit
 
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x3UL << 2U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x3UL << 2U )
                              & ~( 0x2UL << 0U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x3UL << 6U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x3UL << 6U )
                              & ~( 0x2UL << 4U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x3UL << 10U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x3UL << 10U )
                              & ~( 0x2UL << 8U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x3UL << 14U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x3UL << 14U )
                              & ~( 0x2UL << 12U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x1UL << 18U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x1UL << 18U )
                              & ~( 0x3UL << 16U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x1UL << 22U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x1UL << 22U )
                              & ~( 0x3UL << 20U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x1UL << 26U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x1UL << 26U )
                              & ~( 0x3UL << 24U );
-    GPIOB->CRL  = GPIOA->CRL & ~( 0x1UL << 30U )
+    GPIOB->CRL  = GPIOB->CRL & ~( 0x1UL << 30U )
                              & ~( 0x3UL << 28U );
 
     GPIOB->CRL  |= ( 0x1UL << 0U );
