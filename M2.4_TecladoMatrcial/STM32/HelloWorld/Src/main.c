@@ -38,26 +38,19 @@ int main(void)
 
 void USER_GPIO_Init( void ){
 	// RCC_APB2ENR modified to IO port A clock enable
-	RCC->APB2ENR	= RCC->APB2ENR//			RCC_APB2ENR actual value
-					|//							to set
-					( 0x1UL << 2U );//			(mask) IOPAEN bit
-
-	// GPIOx_ODR modified to reset pin 5 of port A (LD2 is connected to PA5)
-	GPIOA->ODR		= GPIOA->ODR//				GPIOx_ODR actual value
-					&//							to clear
-					~( 0x1UL << 5U );//			(mask) ODR5 bit
-
-	// GPIOx_CRL modified to configure pin5 as output
-	GPIOA->CRL		=	GPIOA->CRL//			GPIOx_CRL actual value
-					&//							to clear
-					~( 0x3UL << 22U )//			(mask) CNF5[1:0] bits
-					&//							to clear
-					~( 0x2UL << 20U );//		(mask) MODE5_1 bit
-
-	// GPIOx_CRL modified to select pin5 max speed of 10MHz
-	GPIOA->CRL		=	GPIOA->CRL//			GPIOx_CRL actual value
-					|//							to set
-					( 0x1UL << 20U );//			(mask) MODE5_0 bit
+	RCC->APB2ENR |= ( 0x1UL << 3U ); 
+	GPIOB->ODR &= ~( 0x1UL << 0U ); 
+    GPIOB->ODR &= ~( 0x1UL << 1U ); 
+    GPIOB->ODR &= ~( 0x1UL << 2U ); 
+    GPIOB->ODR &= ~( 0x1UL << 3U );
+	GPIOB->CRL &= ~( 0x3UL << 2U ) & ~( 0x2UL << 0U );
+	GPIOB->CRL |= ( 0x1UL << 0U );
+	GPIOB->CRL &= ~( 0x3UL << 6U ) & ~( 0x2UL << 4U );
+    GPIOB->CRL |= ( 0x1UL << 4U );
+    GPIOB->CRL &= ~( 0x3UL << 10U ) & ~( 0x2UL << 8U );
+    GPIOB->CRL |= ( 0x1UL << 8U );
+    GPIOB->CRL &= ~( 0x3UL << 14U ) & ~( 0x2UL << 12U );
+    GPIOB->CRL |= ( 0x1UL << 12U );
 }
 
 void USER_SystemClock_Config( void ){
