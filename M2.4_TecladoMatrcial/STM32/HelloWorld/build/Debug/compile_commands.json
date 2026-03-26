@@ -1,0 +1,26 @@
+[
+{
+  "directory": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug",
+  "command": "C:\\Users\\ENRIQUE\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\bin\\arm-none-eabi-gcc.exe -DDEBUG -DRTE_DEVICE_STARTUP_STM32F1XX -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Inc\" -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -g -std=gnu11 -mcpu=cortex-m3 -mlittle-endian -mthumb -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles\\HelloWorld.dir\\Src\\main.c.obj -c \"D:\\VisualStudio\\Proyects\\Sistemas en Chip\\STM32\\HelloWorld\\Src\\main.c\"",
+  "file": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Src/main.c",
+  "output": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/HelloWorld.dir/Src/main.c.obj"
+},
+{
+  "directory": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug",
+  "command": "C:\\Users\\ENRIQUE\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\bin\\arm-none-eabi-gcc.exe -DDEBUG -DRTE_DEVICE_STARTUP_STM32F1XX -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Inc\" -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -g -std=gnu11 -mcpu=cortex-m3 -mlittle-endian -mthumb -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles\\HelloWorld.dir\\Src\\syscall.c.obj -c \"D:\\VisualStudio\\Proyects\\Sistemas en Chip\\STM32\\HelloWorld\\Src\\syscall.c\"",
+  "file": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Src/syscall.c",
+  "output": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/HelloWorld.dir/Src/syscall.c.obj"
+},
+{
+  "directory": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug",
+  "command": "C:\\Users\\ENRIQUE\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\bin\\arm-none-eabi-gcc.exe -DDEBUG -DRTE_DEVICE_STARTUP_STM32F1XX -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Inc\" -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld\" -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -g -std=gnu11 -mcpu=cortex-m3 -mlittle-endian -mthumb -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles\\HelloWorld.dir\\Src\\sysmem.c.obj -c \"D:\\VisualStudio\\Proyects\\Sistemas en Chip\\STM32\\HelloWorld\\Src\\sysmem.c\"",
+  "file": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Src/sysmem.c",
+  "output": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/HelloWorld.dir/Src/sysmem.c.obj"
+},
+{
+  "directory": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug",
+  "command": "C:\\Users\\ENRIQUE\\AppData\\Local\\stm32cube\\bundles\\gnu-tools-for-stm32\\14.3.1+st.2\\bin\\arm-none-eabi-gcc.exe -DDEBUG -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Inc\" -I\"D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld\" -g -mcpu=cortex-m3 -mlittle-endian -mthumb -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -x assembler-with-cpp -MMD -MP -O0 -g3 -ggdb -o CMakeFiles\\HelloWorld.dir\\Src\\startup_stm32f103xx.S.obj -c \"D:\\VisualStudio\\Proyects\\Sistemas en Chip\\STM32\\HelloWorld\\Src\\startup_stm32f103xx.S\"",
+  "file": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/Src/startup_stm32f103xx.S",
+  "output": "D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/HelloWorld.dir/Src/startup_stm32f103xx.S.obj"
+}
+]

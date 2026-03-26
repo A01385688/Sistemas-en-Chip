@@ -1,0 +1,3 @@
+D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/HelloWorld.dir
+D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/edit_cache.dir
+D:/VisualStudio/Proyects/Sistemas en Chip/STM32/HelloWorld/build/Debug/CMakeFiles/rebuild_cache.dir
