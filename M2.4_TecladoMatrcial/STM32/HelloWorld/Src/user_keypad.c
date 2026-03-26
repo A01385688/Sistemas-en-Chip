@@ -3,7 +3,7 @@
 #include "user_keypad.h"
 
 void USER_Keypad_Init( void ){
-    RCC->APB2ENR |= ( 0x1UL << 2U );
+    RCC->APB2ENR |= ( 0x1UL << 3U );
 
     GPIOB->ODR & = ~( 0x1UL << 0U );//	Reset ODR0 bit
     GPIOB->ODR & = ~( 0x1UL << 1U );//	Reset ODR1 bit
