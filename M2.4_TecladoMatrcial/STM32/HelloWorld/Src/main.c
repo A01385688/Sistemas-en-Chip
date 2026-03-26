@@ -37,20 +37,19 @@ int main(void)
 }
 
 void USER_GPIO_Init( void ){
-	// RCC_APB2ENR modified to IO port A clock enable
-	RCC->APB2ENR |= ( 0x1UL << 3U ); 
-	GPIOB->ODR &= ~( 0x1UL << 0U ); 
-    GPIOB->ODR &= ~( 0x1UL << 1U ); 
-    GPIOB->ODR &= ~( 0x1UL << 2U ); 
-    GPIOB->ODR &= ~( 0x1UL << 3U );
-	GPIOB->CRL &= ~( 0x3UL << 2U ) & ~( 0x2UL << 0U );
-	GPIOB->CRL |= ( 0x1UL << 0U );
-	GPIOB->CRL &= ~( 0x3UL << 6U ) & ~( 0x2UL << 4U );
-    GPIOB->CRL |= ( 0x1UL << 4U );
-    GPIOB->CRL &= ~( 0x3UL << 10U ) & ~( 0x2UL << 8U );
-    GPIOB->CRL |= ( 0x1UL << 8U );
-    GPIOB->CRL &= ~( 0x3UL << 14U ) & ~( 0x2UL << 12U );
-    GPIOB->CRL |= ( 0x1UL << 12U );
+	RCC->APB2ENR |= ( 0x1UL << 2U );
+	GPIOA->ODR &= ~( 0x1UL << 0U ); 
+    GPIOA->ODR &= ~( 0x1UL << 1U ); 
+    GPIOA->ODR &= ~( 0x1UL << 2U ); 
+    GPIOA->ODR &= ~( 0x1UL << 3U );
+	GPIOA->CRL &= ~( 0x3UL << 2U ) & ~( 0x2UL << 0U ); 
+    GPIOA->CRL |= ( 0x1UL << 0U );                     
+    GPIOA->CRL &= ~( 0x3UL << 6U ) & ~( 0x2UL << 4U );
+    GPIOA->CRL |= ( 0x1UL << 4U );
+    GPIOA->CRL &= ~( 0x3UL << 10U ) & ~( 0x2UL << 8U );
+    GPIOA->CRL |= ( 0x1UL << 8U );
+    GPIOA->CRL &= ~( 0x3UL << 14U ) & ~( 0x2UL << 12U );
+    GPIOA->CRL |= ( 0x1UL << 12U );
 }
 
 void USER_SystemClock_Config( void ){
