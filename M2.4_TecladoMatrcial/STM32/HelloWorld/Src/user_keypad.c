@@ -5,8 +5,6 @@
 void USER_Keypad_Init( void ){
     RCC->APB2ENR |= ( 0x1UL << 3U );
 
-    GPIOB->ODR = 0x0UL;//               Reset (Limpieza) de los 16 bits
-
     GPIOB->ODR |= ( 0x1UL << 0U );//	Set ODR0 bit
     GPIOB->ODR |= ( 0x1UL << 1U );//	Set ODR1 bit
     GPIOB->ODR |= ( 0x1UL << 2U );//	Set ODR2 bit
