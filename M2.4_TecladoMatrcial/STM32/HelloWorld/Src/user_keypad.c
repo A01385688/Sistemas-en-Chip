@@ -50,11 +50,11 @@ uint8_t USER_Key( void ){
         {'*','0','#','D'}
     };
 
-    for(uint8_t f = 0U; f < 4U; f++){
+    for(uint8_t f = 0U; f < 4U; f++){//                     Barrido para Filas
         GPIOB->BSRR = ( 0xFU );
         GPIOB->BBR = (0x1UL << f);
 
-        for(uint8_t c = 0U; c < 4U; c++){
+        for(uint8_t c = 0U; c < 4U; c++){//                 Barrido para Columnas
             if(GPIOB->IDR & (0x1UL << (c + 4))){
                 while(!(GPIOB->IDR & (0x1UL << (c + 4))));
                 
