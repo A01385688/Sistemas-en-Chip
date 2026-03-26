@@ -43,13 +43,26 @@ void USER_Keypad_Init( void ){
 
 uint8_t USER_Key( void ){
     uint8_t key = 0xFFU;
+    uint8_t keymap[4][4]{
+        {'1','2','3','A'},
+        {'4','5','6','B'},
+        {'7','8','9','C'},
+        {'*','0','#','D'}
+    };
 
-    for( uint8_t i = 0U; i < 7U; i++ )
-        if( ( GPIOA->IDR & ( 0x1UL << i ) ) == 0U ){
-            while( ( GPIOA->IDR & ( 0x1UL << i ) ) == 0U );
-            key = iU;
-            break;
+    for(uint8_t f = 0U; f < 4U; f++){
+        GPIOB->BSRR = ( 0xFU );
+        GPIOB->BBR = (0x1UL << f);
+
+        for(uint8_t c = 0U; c < 4U; c++){
+            if(GPIOB->IDR & (0x1UL << (c + 4))){
+                while(!(GPIOB->IDR & (0x1UL << (c + 4))));
+                
+                key = keymap[f][c];
+                return key;
+            }
         }
+    }
     return key;
 }
             
