@@ -42,6 +42,7 @@ void USER_Keypad_Init( void ){
 }
 
 uint8_t USER_Key( void ){
+    uint8_t Bkey = 0;
     uint8_t key = 0xFFU;
     uint8_t keymap[4][4]{
         {'1','2','3','A'},
@@ -59,11 +60,27 @@ uint8_t USER_Key( void ){
                 while(!(GPIOB->IDR & (0x1UL << (c + 4))));
                 
                 key = keymap[f][c];
-                return key;
+                break;
             }
         }
+    if (key != 0xFFU) break;
     }
-    return key;
+
+    // 2. Lógica de la Bandera (Flanco de bajada)
+    if (key != 0xFFU) {
+        if (!Bkey){
+            key = key; 
+            Bkey = 1;
+        } else {
+            key = 0xFFU; 
+        }
+    } 
+    else {
+        Bkey = 0;
+        key = 0xFFU;
+    }
+
+    return key; 
 }
             
 
