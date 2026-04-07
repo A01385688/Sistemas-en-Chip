@@ -1,1 +1,14 @@
-
+En está carpeta se encuentra la actvidad "M2.4" que trata sobre el Teclado Matricial. En esta carpeta encontramos:
+- Diagrama
+    - > Diagrama
+    - > README
+- STM32
+    - >  Inc
+    - >  Src
+    - >  build/Debug
+    - >  cmake
+    - >  CMakeLists
+    - >  CMakePresents
+    - >  stm32103ab_flash
+- Video
+    - >  Video (vid-20260326-002513285_KnN)
