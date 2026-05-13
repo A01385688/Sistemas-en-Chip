@@ -1,3 +1,0 @@
-sudo apt update && sudo apt install sqlite3 curl libnotify-bin xdg-utils
-sudo apt update && sudo apt install jq
-
